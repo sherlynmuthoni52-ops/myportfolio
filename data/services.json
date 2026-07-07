@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Portfolio Websites",
+    "category": "web",
+    "description": "Clean and responsive personal websites for students, creatives, and small organizations."
+  },
+  {
+    "title": "Computing Lessons",
+    "category": "teaching",
+    "description": "Beginner-friendly computer lessons for children who are learning basic digital skills."
+  },
+  {
+    "title": "Cybersecurity Awareness",
+    "category": "learning",
+    "description": "Simple safety tips and learning support for people who want to understand online protection."
+  }
+]

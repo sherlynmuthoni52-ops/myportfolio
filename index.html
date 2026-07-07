@@ -25,13 +25,28 @@
     <section class="hero">
       <div>
         <h1>Welcome to my portfolio</h1>
-        <p>I'm Sherlyn Muthoni, a second-year IT student at Africa International University. I create thoughtful websites while learning cybersecurity and artificial intelligence.</p>
+        <p id="intro-text">I'm Sherlyn Muthoni, a second-year IT student at Africa International University. I create thoughtful websites while learning cybersecurity and artificial intelligence.</p>
         <p>Explore my work, services, and how I can help with website development or beginner computing lessons for young learners.</p>
-        <a class="btn" href="contact.html">Get in touch</a>
+        <button class="btn" id="highlight-btn" type="button">Highlight skills</button>
+        <a class="btn secondary-btn" href="contact.html">Get in touch</a>
       </div>
       <div>
         <img src="images/hero-tech.jpg" alt="Portfolio highlight image" />
       </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <h2>Featured Services</h2>
+        <p id="service-count">Loading services...</p>
+      </div>
+      <div class="filter-actions">
+        <button class="filter-btn active" type="button" data-filter="all">All</button>
+        <button class="filter-btn" type="button" data-filter="web">Web</button>
+        <button class="filter-btn" type="button" data-filter="teaching">Teaching</button>
+        <button class="filter-btn" type="button" data-filter="learning">Learning</button>
+      </div>
+      <div class="cards" id="services-list"></div>
     </section>
 
     <section class="section">
@@ -57,5 +72,6 @@
       <p>© 2026 Sherlyn Muthoni</p>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

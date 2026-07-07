@@ -36,20 +36,24 @@
     <section class="section">
       <div class="contact-card">
         <h3>Send a message</h3>
-        <form action="#" method="post">
+        <form id="contact-form" action="#" method="post" novalidate>
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Your name" required />
+          <small class="error-message" id="name-error"></small>
 
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="Your email" required />
+          <small class="error-message" id="email-error"></small>
 
           <label for="phone">Phone</label>
           <input type="tel" id="phone" name="phone" placeholder="Your phone number" />
 
           <label for="message">Message</label>
           <textarea id="message" name="message" placeholder="How can I help you?" required></textarea>
+          <small class="error-message" id="message-error"></small>
 
           <button type="submit">Send message</button>
+          <p class="form-message" id="form-message"></p>
         </form>
       </div>
     </section>
@@ -60,5 +64,6 @@
       <p>© 2026 Sherlyn Muthoni</p>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

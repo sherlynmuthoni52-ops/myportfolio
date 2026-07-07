@@ -104,8 +104,49 @@ button:hover {
   transform: translateY(-2px);
 }
 
+.secondary-btn {
+  margin-left: 10px;
+  background: #24527a;
+}
+
+.secondary-btn:hover {
+  background: #1c3048;
+}
+
 .section {
   padding: 28px 0 64px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.section-heading h2,
+.section-heading p {
+  margin: 0;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  background: #ffffff;
+  color: #24527a;
+  border: 1px solid #cfd7e3;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: #24527a;
+  color: #ffffff;
 }
 
 .cards {
@@ -144,6 +185,23 @@ button:hover {
   color: #1c3048;
 }
 
+.category-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  border-radius: 999px;
+  background: #e7f1f8;
+  color: #24527a;
+  padding: 4px 10px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.skills-highlighted .service-card {
+  border-color: #d45d79;
+  box-shadow: 0 14px 34px rgba(212, 93, 121, 0.18);
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -168,6 +226,25 @@ textarea {
   resize: vertical;
 }
 
+.error-message {
+  min-height: 18px;
+  color: #b42318;
+  font-size: 0.9rem;
+}
+
+.form-message {
+  margin: 0;
+  font-weight: 700;
+}
+
+.form-message.error {
+  color: #b42318;
+}
+
+.form-message.success {
+  color: #1f7a4d;
+}
+
 footer {
   background: #1c3048;
   color: #ffffff;
@@ -189,7 +266,8 @@ footer {
 
 @media (max-width: 760px) {
   nav,
-  .hero {
+  .hero,
+  .section-heading {
     flex-direction: column;
     align-items: flex-start;
   }
