@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #223;
+  background: #f7f9fb;
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e4e8ee;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 0;
+}
+
+nav div {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+a {
+  color: #24527a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: #d45d79;
+}
+
+.brand {
+  font-size: 1.25rem;
+  color: #1c3048;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 42px;
+  padding: 64px 0 44px;
+  animation: fadeSlideIn 900ms ease both;
+}
+
+.hero > div {
+  flex: 1 1 0;
+}
+
+.hero h1 {
+  margin: 0 0 18px;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  color: #1c3048;
+}
+
+.hero p {
+  max-width: 620px;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 18px 45px rgba(28, 48, 72, 0.18);
+}
+
+.btn,
+button {
+  display: inline-block;
+  border: 0;
+  border-radius: 6px;
+  background: #d45d79;
+  color: #ffffff;
+  padding: 12px 20px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.btn:hover,
+button:hover {
+  color: #ffffff;
+  background: #b94663;
+  transform: translateY(-2px);
+}
+
+.section {
+  padding: 28px 0 64px;
+}
+
+.cards {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.service-card,
+.about-card,
+.contact-card {
+  background: #ffffff;
+  border: 1px solid #e4e8ee;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 10px 28px rgba(28, 48, 72, 0.08);
+}
+
+.service-card {
+  flex: 1 1 260px;
+  animation: fadeSlideIn 900ms ease both;
+}
+
+.service-card:nth-child(2) {
+  animation-delay: 120ms;
+}
+
+.service-card:nth-child(3) {
+  animation-delay: 240ms;
+}
+
+.service-card h3,
+.about-card h3,
+.contact-card h3 {
+  margin-top: 0;
+  color: #1c3048;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-weight: 700;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #cfd7e3;
+  border-radius: 6px;
+  padding: 12px;
+  font: inherit;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+footer {
+  background: #1c3048;
+  color: #ffffff;
+  padding: 18px 0;
+  text-align: center;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 760px) {
+  nav,
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero {
+    padding-top: 42px;
+  }
+
+  .hero img {
+    height: 260px;
+  }
+}
