@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Database Integration | Sherlyn Muthoni</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="index.html">Sherlyn Muthoni</a>
+        <div>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="database.html">Database</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Database Integration</h1>
+        <p>Connect web pages to databases using MySQL and PHP. This example uses a basic SELECT query to read service records from a database and display them on a webpage.</p>
+        <a class="btn" href="services.php">Open PHP demo</a>
+        <a class="btn secondary-btn" href="services.html">View services</a>
+      </div>
+      <div class="database-panel" aria-label="Database workflow">
+        <div class="workflow-step">HTML page</div>
+        <div class="workflow-arrow">to</div>
+        <div class="workflow-step">PHP script</div>
+        <div class="workflow-arrow">to</div>
+        <div class="workflow-step">MySQL database</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <h2>Basic SELECT Query</h2>
+        <p>PHP + MySQL</p>
+      </div>
+      <div class="database-grid">
+        <article class="service-card">
+          <h3>What the query does</h3>
+          <p>The PHP file connects to MySQL, runs a SELECT statement, receives matching rows, and prints each row inside the webpage.</p>
+          <pre><code>SELECT title, category, description
+FROM services
+ORDER BY title;</code></pre>
+        </article>
+
+        <article class="service-card">
+          <h3>Files included</h3>
+          <p><strong>services.php</strong> contains the connection and SELECT query.</p>
+          <p><strong>database_setup.sql</strong> creates sample records for testing in MySQL.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Sherlyn Muthoni</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

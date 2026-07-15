@@ -5,6 +5,11 @@
     "description": "Clean and responsive personal websites for students, creatives, and small organizations."
   },
   {
+    "title": "Database Integration",
+    "category": "database",
+    "description": "Connect webpages to MySQL using PHP and display records with a basic SELECT query."
+  },
+  {
     "title": "Computing Lessons",
     "category": "teaching",
     "description": "Beginner-friendly computer lessons for children who are learning basic digital skills."
