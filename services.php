@@ -1,24 +1,9 @@
-<?php
-$host = "localhost";
-$username = "root";
-$password = "";
-$database = "portfolio_db";
-
-$connection = new mysqli($host, $username, $password, $database);
-
-if ($connection->connect_error) {
-    die("Database connection failed: " . $connection->connect_error);
-}
-
-$sql = "SELECT title, category, description FROM services ORDER BY title";
-$result = $connection->query($sql);
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PHP MySQL Services | Sherlyn Muthoni</title>
+  <title>Services | Sherlyn Muthoni</title>
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
@@ -30,7 +15,6 @@ $result = $connection->query($sql);
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="services.html">Services</a>
-          <a href="database.html">Database</a>
           <a href="contact.html">Contact</a>
         </div>
       </nav>
@@ -38,37 +22,35 @@ $result = $connection->query($sql);
   </header>
 
   <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Services</h1>
+        <p>I offer practical support for website creation, beginner computing lessons, and digital learning.</p>
+      </div>
+      <div>
+        <img src="images/photo1.svg" alt="Service illustration" />
+      </div>
+    </section>
+
     <section class="section">
       <div class="section-heading">
-        <h1>Services From MySQL</h1>
-        <p>Basic SELECT query result</p>
+        <h2>Service options</h2>
+        <p>Choose the right service for your project or learning goals.</p>
       </div>
 
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Category</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php if ($result && $result->num_rows > 0): ?>
-              <?php while ($row = $result->fetch_assoc()): ?>
-                <tr>
-                  <td><?php echo htmlspecialchars($row["title"]); ?></td>
-                  <td><?php echo htmlspecialchars($row["category"]); ?></td>
-                  <td><?php echo htmlspecialchars($row["description"]); ?></td>
-                </tr>
-              <?php endwhile; ?>
-            <?php else: ?>
-              <tr>
-                <td colspan="3">No services found.</td>
-              </tr>
-            <?php endif; ?>
-          </tbody>
-        </table>
+      <div class="cards">
+        <article class="service-card">
+          <h3>Website development</h3>
+          <p>I design user-friendly websites tailored for students, small businesses, and personal projects.</p>
+        </article>
+        <article class="service-card">
+          <h3>Computing lessons</h3>
+          <p>I teach beginner learners how to use computers safely, confidently, and effectively.</p>
+        </article>
+        <article class="service-card">
+          <h3>Cybersecurity and AI learning</h3>
+          <p>I help learners explore online safety and the basics of artificial intelligence as they grow their skills.</p>
+        </article>
       </div>
     </section>
   </main>
@@ -78,8 +60,6 @@ $result = $connection->query($sql);
       <p>&copy; 2026 Sherlyn Muthoni</p>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
-<?php
-$connection->close();
-?>
