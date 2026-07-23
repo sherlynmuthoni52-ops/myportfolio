@@ -3,7 +3,7 @@
 // Database connection settings
 // ----------------------------
 $host = "localhost";       // usually "localhost" on most hosting/XAMPP setups
-$db_name = "your_database_name";  // <-- change to your actual database name
+$db_name = "portfolio_db";  // <-- change to your actual database name
 $username = "root";        // <-- change to your MySQL username
 $password = "";            // <-- change to your MySQL password
 
